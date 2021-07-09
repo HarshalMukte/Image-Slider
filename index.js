@@ -14,3 +14,15 @@ var swiper = new Swiper('.swiper-container', {
       el: '.swiper-pagination',
     },
   });
+
+
+  // for page-loader
+ const loader = document.getElementById("loading") ;
+ const sliderContainer = document.querySelector(".swiper-container");
+  window.addEventListener("load", () => {
+    sliderContainer.classList.remove("hidden");
+    loader.classList.add("fade-down");
+   setTimeout(()=>{
+    loader.style.display = "none";
+   },1000);
+  });
